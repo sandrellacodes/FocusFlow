@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="logo" href="#">✦ FocusFlow</a>
+        <button id="theme-toggle" class="theme-btn">☾</button>
+    </header><main class="dashboard">
+    <section class="welcome">
+        <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+        <h1>Make today <span>count.</span></h1>
+        <p class="subtitle">Small steps. Steady progress. Big results.</p>
+    </section>
+
+    <section class="stats">
+        <article class="stat-card">
+            <p>Tasks completed</p>
+            <h2 id="completed-count">0</h2>
+        </article>
+        <article class="stat-card">
+            <p>Tasks remaining</p>
+            <h2 id="remaining-count">0</h2>
+        </article>
+        <article class="stat-card">
+            <p>Focus sessions</p>
+            <h2 id="session-count">0</h2>
+        </article>
+    </section>
+
+    <section class="content">
+        <article class="panel">
+            <p class="eyebrow">STAY ON TRACK</p>
+            <h2>Today's tasks ✨</h2>
+
+            <form id="task-form">
+                <input id="task-input" type="text" placeholder="What do you want to accomplish?" required>
+                <button class="primary-btn" type="submit">+ Add</button>
+            </form>
+
+            <div class="progress-label">
+                <span>Daily progress</span>
+                <strong id="progress-percent">0%</strong>
+            </div>
+            <div class="progress-track">
+                <div id="progress-bar"></div>
+            </div>
+
+            <ul id="task-list"></ul>
+            <p id="empty-state">Your fresh start begins here. Add your first task!</p>
+        </article>
+
+        <article class="panel timer-panel">
+            <p class="eyebrow">DEEP WORK MODE</p>
+            <h2>Focus timer ⏱️</h2>
+            <p class="subtitle">Give one thing your full attention.</p>
+
+            <div class="timer-circle">
+                <span id="timer-mode">FOCUS TIME</span>
+                <strong id="timer-display">25:00</strong>
+                <small id="timer-status">Ready when you are</small>
+            </div>
+
+            <div class="timer-presets">
+                <button class="preset active" data-minutes="25" data-mode="focus">Focus · 25m</button>
+                <button class="preset" data-minutes="5" data-mode="break">Break · 5m</button>
+            </div>
+
+            <div class="timer-actions">
+                <button id="timer-start" class="primary-btn">▶️ Start</button>
+                <button id="timer-reset" class="secondary-btn">↺ Reset</button>
+            </div>
+        </article>
+    </section>
+
+    <footer>Made with intention ✦ Focus on progress, not perfection.</footer>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
